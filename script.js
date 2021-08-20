@@ -36,38 +36,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
     }
 
-    // // when the input is higher
-    // else if (userGuess > randomNumber) {
-
-    //     if (score > 1) {
-    //         document.querySelector('.message').textContent = 'high';
-    //         score--;
-    //         document.querySelector('.score').textContent = score;
-    //     } else {
-    //         document.querySelector('.message').textContent = 'You LOST!';
-    //         score = 0
-    //         document.querySelector('.score').textContent = score;
-    //         document.querySelector('body').style.backgroundColor = 'red';
-    //         document.querySelector('.number').textContent = randomNumber;
-
-    //     }
-
-    // }
-    // // when the input is lower
-    // else if (userGuess < randomNumber) {
-    //     if (score > 1) {
-    //         document.querySelector('.message').textContent = 'low';
-    //         score--;
-    //         document.querySelector('.score').textContent = score;
-    //     } else {
-    //         document.querySelector('.message').textContent = 'You LOST!';
-    //         score = 0
-    //         document.querySelector('.score').textContent = score;
-    //         document.querySelector('body').style.backgroundColor = 'red';
-    //         document.querySelector('.number').textContent = randomNumber;
-    //     }
-
-    // }
     // when the input is right
     else {
         document.querySelector('.message').textContent = 'Bingo! You WON!';
