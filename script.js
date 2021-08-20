@@ -8,8 +8,9 @@ let highscore = 0;
 document.querySelector('.check').addEventListener('click', function () {
 
     let userGuess = Number(document.querySelector('.guess').value);
-    console.log(userGuess, typeof userGuess);
+    // console.log(userGuess, typeof userGuess);
     document.querySelector('.guess').value = '';
+    document.querySelector('.message').style.color = 'yellow';
 
     // when there's no input
     if (!userGuess) {
@@ -19,7 +20,7 @@ document.querySelector('.check').addEventListener('click', function () {
     else if (userGuess !== randomNumber) {
 
         if (score > 1) {
-            document.querySelector('.message').textContent = userGuess > randomNumber ? 'high' : 'low';
+            document.querySelector('.message').textContent = userGuess > randomNumber ? 'that\'s too high' : 'that\'s too low';
             score--;
             document.querySelector('.score').textContent = score;
         } else {
@@ -28,18 +29,20 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.score').textContent = score;
             document.querySelector('body').style.backgroundColor = 'red';
             document.querySelector('.number').textContent = randomNumber;
+            document.querySelector('.message').style.color = '';
         }
 
     }
-    // when the input is right
+
     else {
         document.querySelector('.message').textContent = 'Bingo! You WON!';
+        document.querySelector('.message').style.color = '';
         document.querySelector('body').style.backgroundColor = 'green';
         document.querySelector('.number').textContent = randomNumber;
-        document.querySelector('.highscore').textContent = score;
         if (score > highscore) {
             document.querySelector('.highscore').textContent = score;
         }
+
     }
 
 });
