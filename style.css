@@ -48,8 +48,10 @@ main {
     align-items: center;
 }
 
-.message {
-    font-size: 1.5rem;
+.message,
+.last-guess {
+    font-size: 1.3rem;
+    /* margin-bottom: 2rem; */
 }
 
 .guess {
@@ -86,8 +88,9 @@ main {
 }
 
 .par-score,
-.par-highscore {
-    font-size: 1.5rem;
+.par-highscore,
+.par-last-guess {
+    font-size: 1.3rem;
 }
 
 .btn {
