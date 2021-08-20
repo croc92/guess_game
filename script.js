@@ -16,6 +16,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // when there's no input
     if (!userGuess) {
         document.querySelector('.message').textContent = 'No Number Input!';
+        document.querySelector('.last-guess').textContent = '__';
     }
     // when the input is wrong
     else if (userGuess !== randomNumber) {
@@ -33,6 +34,7 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.number').textContent = randomNumber;
             document.querySelector('.message').style.color = '';
             document.querySelector('.score').style.color = '';
+
         }
 
     }
@@ -43,7 +45,7 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('body').style.backgroundColor = 'green';
         document.querySelector('.number').textContent = randomNumber;
         document.querySelector('.score').style.color = '';
-    
+
         if (score > highscore) {
             document.querySelector('.highscore').textContent = score;
         }
