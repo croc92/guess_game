@@ -50,7 +50,6 @@ main {
 
 .message {
     font-size: 1.5rem;
-    /* margin-bottom: 2rem; */
 }
 
 .guess {
@@ -88,7 +87,7 @@ main {
 
 .par-score,
 .par-highscore {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .btn {
