@@ -36,6 +36,9 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('body').style.backgroundColor = 'green';
         document.querySelector('.number').textContent = randomNumber;
         document.querySelector('.highscore').textContent = score;
+        if (score > highscore) {
+            document.querySelector('.highscore').textContent = score;
+        }
     }
 
 });
