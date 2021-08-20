@@ -28,7 +28,6 @@ h1 {
 
 .range {
     font-size: 1.25rem;
-    /* margin: 2rem auto; */
 }
 
 .number {
@@ -36,7 +35,6 @@ h1 {
     width: 120px;
     padding: 10px;
     font-size: 2.5rem;
-    /* margin: 2rem auto; */
     border: 5px solid #f5f5f5;
 }
 
