@@ -11,6 +11,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // console.log(userGuess, typeof userGuess);
     document.querySelector('.guess').value = '';
     document.querySelector('.message').style.color = 'yellow';
+    document.querySelector('.last-guess').textContent = userGuess;
 
     // when there's no input
     if (!userGuess) {
@@ -25,24 +26,25 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.score').textContent = score;
             document.querySelector('.score').style.color = 'yellow';
         } else {
-            document.querySelector('.message').textContent = 'You LOST!';
+            document.querySelector('.message').textContent = 'defeat!';
             score = 0
             document.querySelector('.score').textContent = score;
             document.querySelector('body').style.backgroundColor = 'red';
             document.querySelector('.number').textContent = randomNumber;
             document.querySelector('.message').style.color = '';
             document.querySelector('.score').style.color = '';
+            document.querySelector('.last-guess').textContent = '__';
         }
 
     }
-
     // when the input is right
     else {
-        document.querySelector('.message').textContent = 'Bingo! You WON!';
+        document.querySelector('.message').textContent = 'victory!';
         document.querySelector('.message').style.color = '';
         document.querySelector('body').style.backgroundColor = 'green';
         document.querySelector('.number').textContent = randomNumber;
         document.querySelector('.score').style.color = '';
+        document.querySelector('.last-guess').textContent = '__';
         if (score > highscore) {
             document.querySelector('.highscore').textContent = score;
         }
@@ -62,4 +64,5 @@ document.querySelector('.start-over').addEventListener('click', function () {
     document.querySelector('.guess').value = '';
     document.querySelector('body').style.backgroundColor = '';
     document.querySelector('.score').textContent = score;
+    document.querySelector('.last-guess').textContent = '__';
 })
