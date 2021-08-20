@@ -1,7 +1,7 @@
 'use strict';
 
 let randomNumber = Math.floor(Math.random() * 100) + 1;
-console.log(randomNumber);
+// console.log(randomNumber);
 let score = 6;
 let highscore = 0;
 
@@ -9,6 +9,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
     let userGuess = Number(document.querySelector('.guess').value);
     console.log(userGuess, typeof userGuess);
+    document.querySelector('.guess').value = '';
 
     // when there's no input
     if (!userGuess) {
