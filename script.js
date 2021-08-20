@@ -33,7 +33,6 @@ document.querySelector('.check').addEventListener('click', function () {
             document.querySelector('.number').textContent = randomNumber;
             document.querySelector('.message').style.color = '';
             document.querySelector('.score').style.color = '';
-            document.querySelector('.last-guess').textContent = '__';
         }
 
     }
@@ -44,7 +43,7 @@ document.querySelector('.check').addEventListener('click', function () {
         document.querySelector('body').style.backgroundColor = 'green';
         document.querySelector('.number').textContent = randomNumber;
         document.querySelector('.score').style.color = '';
-        document.querySelector('.last-guess').textContent = '__';
+    
         if (score > highscore) {
             document.querySelector('.highscore').textContent = score;
         }
