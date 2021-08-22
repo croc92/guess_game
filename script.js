@@ -5,10 +5,10 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
 let score = 6;
 let highscore = 0;
 
-const isItStored = localStorage.getItem('highscore');
+const storedHighscore = localStorage.getItem('highscore');
 
-if (isItStored !== null) {
-    document.querySelector('.highscore').textContent = isItStored;
+if (storedHighscore !== null) {
+    document.querySelector('.highscore').textContent = storedHighscore;
 }
 
 
