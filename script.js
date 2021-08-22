@@ -1,14 +1,21 @@
 'use strict';
 
 let randomNumber = Math.floor(Math.random() * 100) + 1;
-// console.log(randomNumber);
+
 let score = 6;
 let highscore = 0;
+
+const isItStored = localStorage.getItem('highscore');
+
+if (isItStored !== null) {
+    document.querySelector('.highscore').textContent = isItStored;
+}
+
 
 document.querySelector('.check').addEventListener('click', function () {
 
     let userGuess = Number(document.querySelector('.guess').value);
-    // console.log(userGuess, typeof userGuess);
+    
     document.querySelector('.guess').value = '';
     document.querySelector('.message').style.color = 'yellow';
     document.querySelector('.last-guess').textContent = userGuess;
@@ -48,6 +55,8 @@ document.querySelector('.check').addEventListener('click', function () {
 
         if (score > highscore) {
             document.querySelector('.highscore').textContent = score;
+            // store the highscore to local disc
+            localStorage.setItem('highscore', score);
         }
 
     }
@@ -59,7 +68,7 @@ document.querySelector('.start-over').addEventListener('click', function () {
 
     score = 6;
     randomNumber = Math.floor(Math.random() * 100) + 1;
-    // console.log(randomNumber);
+    
     document.querySelector('.message').textContent = 'start guessing...';
     document.querySelector('.number').textContent = '?';
     document.querySelector('.guess').value = '';
